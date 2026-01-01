@@ -37,22 +37,57 @@
 #   exit 0
 # fi
 
-read -rp "enter number 1 to 4:" num
-case "$num" in 
-  1)
-    echo "one"
-    ;;
-  2)
-    echo "two"
-    ;;
-  3)
-    echo "three"
-    ;;
-  4)
-    echo "four"
-    ;;
-  *)
-    echo "0"
-    ;;
-esac
+# read -rp "enter number 1 to 4:" num
+# case "$num" in 
+#   1) echo "one" ;;
+#   2) echo "two" ;;
+#   3) echo "three" ;;
+#   4) echo "four" ;;
+#   *) echo "0" ;;
+# esac
+
+# case "${1:-}" in
+#   *.txt) 
+#     echo "Text File"
+#     ;;
+#   *.sh) 
+#     echo "Shell script"
+#     ;;
+# *)
+#   echo "Invalid Input"
+#   ;;
+# esac
+
+#loop
+# for i in a b c; do
+#   echo "$i"
+# done
+
+#argument after script call
+# for i in "$@"; do
+#   echo "$i"
+# done
+
+#all files ends with .txt
+# for i in *.txt; do
+#   echo ": $i "
+# done
+
+# C style
+# for ((i=0; i<7; i++ )) do 
+#   echo ": $i"
+# done
+
+# range
+# for i in {1..30}; do
+#   echo "$i"
+# done
+
+# read file
+# while IFS= read -r line; do
+#   echo "$line"
+# done < simple.txt
+
+
+
 
