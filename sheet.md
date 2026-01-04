@@ -23,9 +23,9 @@ INPUT >
 
 `read` # input argument  
 `-p`   # prints the prompt  
-`-s`  # silent (no echo)  
+`-s`   # silent (no echo)  
 `-r`   # prevents backslash escaping  
-`-t`   # timeout for 5 sec  
+`-t`   # timeout
 `name=${name:-Unknown}` # If input empty  
 
 Examples: 
@@ -101,7 +101,22 @@ until condition; do
   commands
 done
 ```
+---
+Function
+```
+function_name() {
+    condition
+}
 
+# OR
+
+function function_name() {
+    condition
+}
+
+# calling function
+function_name "$argument"
+```
   
 `flock`: File-locking utility to ensure only one instance of a script or critical section runs at a time.
   

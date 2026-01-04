@@ -88,6 +88,47 @@
 #   echo "$line"
 # done < simple.txt
 
+# for i in "$@";  do 
+#   echo "for argument: $i"
+#   if [[ -f "$i" ]]; then 
+#     echo "file"
+#   elif [[ -d "$i" ]]; then
+#     echo "dir"
+#   else
+#     echo "invalid"
+#   fi
+# done
+
+
+# checkType() {
+#   [[ -f "$1" ]] && return 0
+#   [[ -d "$1" ]] && return 1
+#   return 2
+# }
+# OR
+# checkType() {
+#   file="$1"
+#   [[ -f "$file" ]] && return 0
+#   [[ -d "$file" ]] && return 1
+#   return 2
+# }
+# for i in "$@"; do 
+#   checkType "$i"
+#   echo "$?"
+# done
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
