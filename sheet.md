@@ -135,6 +135,8 @@ done
 ```
 
 `echo`: Simple output command automatic newline easy debugging inconsistent behavior limited formatting.
+  
 `printf`: Portable predictable formatting command precise control no automatic newline script safe.
+  
 `flock`: File-locking utility to ensure only one instance of a script or critical section runs at a time.
   
