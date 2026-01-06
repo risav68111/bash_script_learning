@@ -118,6 +118,41 @@
 # done
 
 
+help_fn() {
+  echo " what to do in $0: " 
+  echo " -f is must." 
+  echo " Then find if directory exists or its a file." 
+  echo " -v for verbose." 
+  echo " -h for help"
+}
+
+# path=""
+# verbose=0
+# while getopts "f:vh" OPT; do
+#   case "$OPT" in 
+#     f) 
+#       path="$OPTARG" ;; 
+#     v)
+#       verbose=1 ;;
+#     h)
+#       help_fn;  exit 0 ;;
+#     \?)
+#       help_fn;  exit 2 ;;
+#   esac
+# done
+#
+# [[ -z "$path" ]] && { help_fn; exit 2; }
+#
+# [[ "$verbose" -eq 1 ]] && echo "verbose enabled." 
+#
+# if [[ -d "$path" ]]; then
+#   echo "DIRECTORY"
+# elif [[ -f "$path" ]]; then
+#   echo "FILE"
+# else 
+#   echo "invalid input: $path"
+# fi
+
 
 
 

@@ -117,6 +117,26 @@ function function_name() {
 # calling function
 function_name "$argument"
 ```
+
+`getopts`  parses flags only, in any order, not positional args
+example: `-f -v ...` or `-fvh` not `file`
+`f:vh`: 
+  
+`f:` This option requires an argument.
+  
+`v` or `h`: This option does not require an argument.
+
+```
+while getopts "options" opt; do
+  case "$opt" in
+    ...)
+  esac
+done
+```
+
+`echo`: Simple output command automatic newline easy debugging inconsistent behavior limited formatting.
+  
+`printf`: Portable predictable formatting command precise control no automatic newline script safe.
   
 `flock`: File-locking utility to ensure only one instance of a script or critical section runs at a time.
   
