@@ -1,4 +1,5 @@
 
+
 start of every bash script : `#!/usr/bin/env bash`
 
 ---
@@ -25,10 +26,12 @@ Example :
 
 NOTE:
 When looping over arguments, always use `"$@"`.
+
 ---
   
 ---
-INPUT >
+  
+INPUT 
 
 `read` : input argument  
 `-p`   : prints the prompt  
@@ -38,8 +41,10 @@ INPUT >
 `name=${name:-Unknown}` : If input empty  
 
 Examples: 
+
 `read` -rp "Enter arg" -t 5 arg  
 `read` first last : > 1 2 3 :> "1" "2 3"  
+
 ---
      
 ---
@@ -66,11 +71,13 @@ Numerical Comparision
 `[[ "$a" -ge 10 ]]`     : greater or equal
 `[[ "$a" -lt 10 ]]`     : less than
 `[[ "$a" -le 10 ]]`     : less or equal
-   
+     
 Arithmetic Comparison (Preferred for Numbers)
+
 `(( a == 10 ))`
 `(( a > 10 ))`
 `(( a <= 10 ))`
+
 ---
    
 ---
@@ -150,7 +157,9 @@ function_name "$argument"
 
 ---
 `getopts`  parses flags only, in any order, not positional args
+
 example: `-f -v ...` or `-fvh` not `file`
+
 `f:vh`: 
   
 `f:` This option requires an argument.
