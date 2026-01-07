@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 
-
 # echo "Name: $0"
 # echo "COUNTING: $#"
 # echo "\$* $*"
@@ -118,16 +117,32 @@
 # done
 
 
-help_fn() {
-  echo " what to do in $0: " 
-  echo " -f is must." 
-  echo " Then find if directory exists or its a file." 
-  echo " -v for verbose." 
-  echo " -h for help"
-}
+# help_fn() {
+#   echo " what to do in $0: " 
+#   echo " -f is must." 
+#   echo " Then find if directory exists or its a file." 
+#   echo " -v for verbose." 
+#   echo " -h for help"
+# }
+
+# Proper format print as it is
+# help_fn() {
+#   cat <<EOF
+# Usage: $0 [OPTIONS]
+#
+# Options:
+#   -f        Required. Specify a directory to check if it exists or a file.
+#   -v        Enable verbose mode.
+#   -h        Display this help message.
+#
+# Description:
+# This script checks whether a specified directory exists or if the argument is a file.
+#
+# EOF
+# }
 
 # path=""
-# verbose=0
+# verbose=0 # normally boolean
 # while getopts "f:vh" OPT; do
 #   case "$OPT" in 
 #     f) 
@@ -152,6 +167,35 @@ help_fn() {
 # else 
 #   echo "invalid input: $path"
 # fi
+
+# set -x
+# set -e
+# set -u
+# set -o pipefail
+# OR 
+# set -euo pipefail
+count=0
+while true; do
+  if ! read -rp "yoda give file name: " -t 10 INPUT ; then
+    # INPUT=${INPUT:-NoInput}
+    ((count++))
+    (( count >= 5 )) && { printf "\nTIME OUT!!!\n"; exit 1; }
+    printf "\nNo Input retry."
+    continue
+  fi
+
+  [[ "$INPUT" == "quit" ]] && { printf "exiting\n"; exit 0; }
+  
+  if [[ -f "$INPUT" ]]; then 
+    printf "the file yoda found\n"
+  elif [[ -d "$INPUT" ]] ; then 
+    printf "directory its\n"
+    set +x
+  else 
+    printf "file or directory its nor \n"
+  fi
+
+done
 
 
 
