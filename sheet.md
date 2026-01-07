@@ -118,14 +118,13 @@ function function_name() {
 function_name "$argument"
 ```
 
-`getopts`  parses flags only, in any order, not positional args
-example: `-f -v ...` or `-fvh` not `file`
-`f:vh`: 
-  
-`f:` This option requires an argument.
-  
-`v` or `h`: This option does not require an argument.
-
+`getopts`  parses flags only, in any order, not positional args.   
+example: `-f -v ...` or `-fvh` not `file`.   
+    
+`f:vh`:   
+`f:` This option requires an argument.   
+`v` or `h`: This option does not require an argument.    
+    
 ```
 while getopts "options" opt; do
   case "$opt" in
