@@ -178,20 +178,20 @@ done
 --- 
 Debugging & Safety in Bash
    
-Show commands as they execute: 
-`set -x`
-`set +x`
+Show commands as they execute:   
+`set -x`  
+`set +x`  
 
-Exit immediately on error
-`set -e`
+Exit immediately on error  
+`set -e`  
 
-Treat unset variables as errors
-`set -u`
+Treat unset variables as errors  
+`set -u`  
 
-Fail pipeline if any command fails
-`set -o pipefail`
+Fail pipeline if any command fails  
+`set -o pipefail`  
 
-Safe mode header for real scripts
+Safe mode header for real scripts  
 
 ```
 #!/usr/bin/env bash
@@ -199,25 +199,27 @@ set -euo pipefail
 IFS=$'\n\t'
 ``` 
 
-Traps
-`trap 'echo "exiting"' EXIT`
-`trap 'echo "interrupted"; exit 1' INT`
+Traps  
+`trap 'echo "exiting"' EXIT`  
+`trap 'echo "interrupted"; exit 1' INT`  
 
-Debug variables
-`echo "var=$var"`
-`declare -p var`
-  
+Debug variables  
+`echo "var=$var"`  
+`declare -p var`  
+    
 Check exit status
-```
+```  
 command
 echo $?
 ```
   
-Syntax check
-`bash -n script.sh`
+Syntax check  
+`bash -n script.sh`  
 
-Linting
-`shellcheck script.sh`
+Linting  
+
+`shellcheck script.sh`  
+
 ---  
   
 `echo`: Simple output command automatic newline easy debugging inconsistent behavior limited formatting.
