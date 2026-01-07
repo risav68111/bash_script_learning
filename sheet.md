@@ -16,38 +16,38 @@ Example :
 `[[ cond1 || cond2 ]]` # OR   
 `! condition`          # NOT   
 
-NOTE:
+NOTE:  
 When looping over arguments, always use `"$@"`.
 
-INPUT >
-
+INPUT:  
 `read` # input argument  
 `-p`   # prints the prompt  
 `-s`   # silent (no echo)  
 `-r`   # prevents backslash escaping  
-`-t`   # timeout
-`name=${name:-Unknown}` # If input empty  
+`-t`   # timeout  
+`name=${name:-Unknown}` # If input empty   
 
-Examples: 
+Examples:  
 `read` -rp "Enter arg" -t 5 arg  
-`read` first last # > 1 2 3 :> "1" "2 3"  
+`read` first last # > 1 2 3 :> "1" "2 3"   
 
-FILES AND DIRECTORY
-`-f` `file`     # regular file
-`-d` `dir`      # directory
-`-e` `path`     # exists
-`-r` `file`     # readable
-`-w` `file`     # writable
-`-x` `file`     # executable
-`-s` `file`     # exists and not empty
+FILES AND DIRECTORY  
+`-f` `file`     # regular file  
+`-d` `dir`      # directory  
+`-e` `path`     # exists  
+`-r` `file`     # readable  
+`-w` `file`     # writable  
+`-x` `file`     # executable  
+`-s` `file`     # exists and not empty  
 
-STRING COMPARISION
- `[[ "$a" == "$b" ]]`     # equal
- `[[ "$a" != "$b" ]]`     # not equal
- `[[ -z "$a" ]]`          # empty
- `[[ -n "$a" ]]`          # not empty
-
-
+STRING COMPARISION  
+  
+ `[[ "$a" == "$b" ]]`     # equal  
+ `[[ "$a" != "$b" ]]`     # not equal  
+ `[[ -z "$a" ]]`          # empty  
+ `[[ -n "$a" ]]`          # not empty  
+  
+  
 CONDTIONAL STATEMENT: 
 ```
 if condition1; then
