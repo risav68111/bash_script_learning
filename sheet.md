@@ -4,16 +4,16 @@ start of every bash script : `#!/usr/bin/env bash`
 
 ---
   
-Strings : `[[ ]]`
-Numbers : `(( ))`
+Strings : `[[ ]]`  
+Numbers : `(( ))`  
   
-Blocks {} require semicolons : `{ cmd1; cmd2; }`
+Blocks {} require semicolons : `{ cmd1; cmd2; }`  
 
 
-`$0`   : script name
-`$#`   : number of arguments
-`$*`   : all arguments on one line (space-separated)
-`$@`   : all args as SEPARATE strings
+`$0`   : script name  
+`$#`   : number of arguments  
+`$*`   : all arguments on one line (space-separated)  
+`$@`   : all args as SEPARATE strings  
 
 Example :
 
@@ -49,38 +49,38 @@ Examples:
      
 ---
 Files And Directory
-`-f` `file`     : regular file
-`-d` `dir`      : directory
-`-e` `path`     : exists
-`-r` `file`     : readable
-`-w` `file`     : writable
-`-x` `file`     : executable
-`-s` `file`     : exists and not empty
-
+`-f` `file`     : regular file  
+`-d` `dir`      : directory  
+`-e` `path`     : exists  
+`-r` `file`     : readable  
+`-w` `file`     : writable  
+`-x` `file`     : executable  
+`-s` `file`     : exists and not empty  
+  
 String Comparision
- `[[ "$a" == "$b" ]]`     : equal
- `[[ "$a" != "$b" ]]`     : not equal
- `[[ -z "$a" ]]`          : empty
- `[[ -n "$a" ]]`          : not empty
+ `[[ "$a" == "$b" ]]`     : equal  
+ `[[ "$a" != "$b" ]]`     : not equal  
+ `[[ -z "$a" ]]`          : empty  
+ `[[ -n "$a" ]]`          : not empty  
   
   
 Numerical Comparision
-`[[ "$a" -eq 10 ]]`     : equal
-`[[ "$a" -ne 10 ]]`     : not equal
-`[[ "$a" -gt 10 ]]`     : greater than
-`[[ "$a" -ge 10 ]]`     : greater or equal
-`[[ "$a" -lt 10 ]]`     : less than
-`[[ "$a" -le 10 ]]`     : less or equal
+`[[ "$a" -eq 10 ]]`     : equal  
+`[[ "$a" -ne 10 ]]`     : not equal  
+`[[ "$a" -gt 10 ]]`     : greater than  
+`[[ "$a" -ge 10 ]]`     : greater or equal  
+`[[ "$a" -lt 10 ]]`     : less than  
+`[[ "$a" -le 10 ]]`     : less or equal  
      
 Arithmetic Comparison (Preferred for Numbers)
 
-`(( a == 10 ))`
-`(( a > 10 ))`
-`(( a <= 10 ))`
-
----
+`(( a == 10 ))`  
+`(( a > 10 ))`  
+`(( a <= 10 ))`  
+  
+---  
    
----
+---  
 CONDTIONAL STATEMENT: 
 ```
 if condition1; then
