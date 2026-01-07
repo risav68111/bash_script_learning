@@ -1,13 +1,13 @@
 
 start of every bash script > #!/usr/bin/env bash
+   
+   
+`$0`   # script name.  
+`$#`   # number of arguments.  
+`$*`   # all arguments on one line (space-separated).  
+`$@`   # all args as SEPARATE strings.  
 
-
-`$0`   # script name. 
-`$#`   # number of arguments. 
-`$*`   # all arguments on one line (space-separated). 
-`$@`   # all args as SEPARATE strings. 
-
-Example :
+Example :  
   
 `$*`   # hello world test
 `$@`   # "hello world" "test"
