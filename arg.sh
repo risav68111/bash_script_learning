@@ -175,28 +175,29 @@
 # OR 
 # set -euo pipefail
 
-count=0
-while true; do
-  if ! read -rp "yoda give file name: " -t 10 INPUT ; then
-    # INPUT=${INPUT:-NoInput}
-    ((count++))
-    (( count >= 5 )) && { printf "\nTIME OUT!!!\n"; exit 1; }
-    printf "\nNo Input retry."
-    continue
-  fi
+# count=0
+# while true; do
+#   if ! read -rp "yoda give file name: " -t 10 INPUT ; then
+#     # INPUT=${INPUT:-NoInput}
+#     ((count++))
+#     (( count >= 5 )) && { printf "\nTIME OUT!!!\n"; exit 1; }
+#     printf "\nNo Input retry."
+#     continue
+#   fi
+#
+#   [[ "$INPUT" == "quit" ]] && { printf "exiting\n"; exit 0; }
+#
+#   if [[ -f "$INPUT" ]]; then 
+#     printf "the file yoda found\n"
+#   elif [[ -d "$INPUT" ]] ; then 
+#     printf "directory its\n"
+#     set +x
+#   else 
+#     printf "file or directory its nor \n"
+#   fi
+#
+# done
 
-  [[ "$INPUT" == "quit" ]] && { printf "exiting\n"; exit 0; }
-  
-  if [[ -f "$INPUT" ]]; then 
-    printf "the file yoda found\n"
-  elif [[ -d "$INPUT" ]] ; then 
-    printf "directory its\n"
-    set +x
-  else 
-    printf "file or directory its nor \n"
-  fi
-
-done
 
 
 

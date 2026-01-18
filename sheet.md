@@ -29,8 +29,26 @@ When looping over arguments, always use `"$@"`.
 
 ---
   
----
+`declare` : defines variables with attributes and to inspect variables.
+
+`declare var=value`        # normal variable
+`declare -i num=5`         # integer variable
+`declare -a arr`           # array
+`declare -A map`           # associative array
+`declare -r CONST=10`      # readonly
+`declare -p var`           # Prints variable name, type, and value. 
+
   
+`local` : Its used inside functions only to create function-scoped variables.
+```
+my_func() {
+  local x=10
+  echo "$x"
+}
+```
+   
+---
+   
 INPUT 
 
 `read` : input argument  
@@ -42,8 +60,8 @@ INPUT
 
 Examples: 
 
-`read` -rp "Enter arg" -t 5 arg  
-`read` first last : > 1 2 3 :> "1" "2 3"  
+`read -rp "Enter arg" -t 5 arg`  
+`read first last` : > 1 2 3 :> "1" "2 3"  
 
 ---
      
