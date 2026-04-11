@@ -10,15 +10,15 @@ Numbers : `(( ))`
 Blocks {} require semicolons : `{ cmd1; cmd2; }`  
 
 
-`$0`   : script name  
-`$#`   : number of arguments  
-`$*`   : all arguments on one line (space-separated)  
-`$@`   : all args as SEPARATE strings  
+`$0`   : script name   
+`$#`   : number of arguments   
+`$*`   : all arguments on one line (space-separated)   
+`$@`   : all args as SEPARATE strings   
 
 Example :
 
-`$*`   : hello world test
-`$@`   : "hello world" "test"
+`$*`   : hello world test   
+`$@`   : "hello world" "test"  
 
 `[[ cond1 && cond2 ]]` : AND  
 `[[ cond1 || cond2 ]]` : OR  
