@@ -20,26 +20,26 @@ Example :
 `$*`   : hello world test
 `$@`   : "hello world" "test"
 
-`[[ cond1 && cond2 ]]` : AND 
-`[[ cond1 || cond2 ]]` : OR
-`! condition`          : NOT 
-
-NOTE:
-When looping over arguments, always use `"$@"`.
-
----
+`[[ cond1 && cond2 ]]` : AND  
+`[[ cond1 || cond2 ]]` : OR  
+`! condition`          : NOT   
   
-`declare` : defines variables with attributes and to inspect variables.
+NOTE:  
+When looping over arguments, always use `"$@"`.  
+  
+---  
+  
+`declare` : defines variables with attributes and to inspect variables.  
 
-`declare var=value`        # normal variable
-`declare -i num=5`         # integer variable
-`declare -a arr`           # array
-`declare -A map`           # associative array
-`declare -r CONST=10`      # readonly
-`declare -p var`           # Prints variable name, type, and value. 
+`declare var=value`        # normal variable  
+`declare -i num=5`         # integer variable  
+`declare -a arr`           # array  
+`declare -A map`           # associative array  
+`declare -r CONST=10`      # readonly  
+`declare -p var`           # Prints variable name, type, and value.   
 
   
-`local` : Its used inside functions only to create function-scoped variables.
+`local` : Its used inside functions only to create function-scoped variables.  
 ```
 my_func() {
   local x=10
@@ -49,7 +49,7 @@ my_func() {
    
 ---
    
-INPUT 
+INPUT  
 
 `read` : input argument  
 `-p`   : prints the prompt  
